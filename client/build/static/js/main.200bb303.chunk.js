@@ -1,0 +1,2 @@
+(this["webpackJsonpfashion-shop-client"]=this["webpackJsonpfashion-shop-client"]||[]).push([[0],[function(n,s,o){n.exports=o(1)},function(n,s){}],[[0,1]]]);
+//# sourceMappingURL=main.200bb303.chunk.js.map
