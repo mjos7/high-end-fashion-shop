@@ -33,43 +33,62 @@ function Login(props) {
     <div className="form-container my-2">
       <div className="my-2">
         <button>
-          <Link to="/signup">← Go to Signup</Link>
+          <Link to="/signup">Go to Sign Up</Link>
         </button>
       </div>
-      <div className="my-2">
+      <div className="my-1">
         <h2>Login</h2>
       </div>
       <div>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2 py-1">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2 py-1">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+        <form
+          className="form-container grey-background"
+          onSubmit={handleFormSubmit}
+        >
+          <div className="py-1">
+            <div className="flex-row py-1">
+              <label htmlFor="email">Email address: </label>
+            </div>
+            <div>
+              <input
+                placeholder="youremail@test.com"
+                name="email"
+                type="email"
+                id="email"
+                onChange={handleChange}
+              />
+            </div>
           </div>
-        ) : null}
-        <div className="flex-row flex-end my-2 py-2">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+
+          <div className="py-1">
+            <div className="flex-row py-1">
+              <label htmlFor="pwd">Password: </label>
+            </div>
+            <div>
+              <input
+                placeholder="******"
+                name="password"
+                type="password"
+                id="pwd"
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          {error ? (
+            <div>
+              <p className="error-text">
+                The provided credentials are incorrect
+              </p>
+            </div>
+          ) : null}
+
+          <div className="flex-row flex-end my-1 py-2">
+            <button className="py-1" type="submit">
+              Submit
+            </button>
+          </div>
+          
+        </form>
       </div>
     </div>
   );
