@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
+import { LOGIN } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       const mutationResponse = await login({
@@ -21,7 +21,7 @@ function Login(props) {
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -30,12 +30,18 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
-
-      <h2>Login</h2>
+    <div className="form-container my-2">
+      <div className="my-2">
+        <button>
+          <Link to="/signup">← Go to Signup</Link>
+        </button>
+      </div>
+      <div className="my-2">
+        <h2>Login</h2>
+      </div>
+      <div>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 py-1">
           <label htmlFor="email">Email address:</label>
           <input
             placeholder="youremail@test.com"
@@ -45,7 +51,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 py-1">
           <label htmlFor="pwd">Password:</label>
           <input
             placeholder="******"
@@ -60,10 +66,11 @@ function Login(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="flex-row flex-end">
+        <div className="flex-row flex-end my-2 py-2">
           <button type="submit">Submit</button>
         </div>
       </form>
+      </div>
     </div>
   );
 }
