@@ -211,6 +211,7 @@ input:focus {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: 50px;
   background-image: url('../../client/src/assets/wp5624287-women-luxury-wallpapers.png');
   background-size: cover;
   background-attachment: fixed;
@@ -222,7 +223,7 @@ input:focus {
   font-weight: 100;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 5px;
+  padding: 7px 15px;
 }
 
 .underline {
