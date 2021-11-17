@@ -173,6 +173,11 @@
     margin-top: var(--spacing-two);
     margin-bottom: var(--spacing-two);
   }
+/* About cover image */
+  .my-5 {
+    margin-top: var(--spacing-five);
+    margin-bottom: var(--spacing-five);
+  }
   
   .px-1 {
     padding-right: var(--spacing-one);
