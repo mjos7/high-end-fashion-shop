@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function About() {
   return (
     <div className="my-5">
-      <Link to="/about">About</Link>
-      <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
-      <div className="my-2">
+      <Link to="/about"></Link>
+      <div className="my-2" class="hero-cta">
+        <h2>About Us</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
           condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna
@@ -18,6 +18,7 @@ function About() {
           Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
         </p>
       </div>
+      <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
     </div>
   );
 }
