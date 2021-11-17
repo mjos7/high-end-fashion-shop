@@ -21,10 +21,10 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="mx-1 ">
             <Link to="/signup">Signup</Link>
           </li>
-          <li className="mx-1">
+          <li className="mx-1 login">
             <Link to="/login">Login</Link>
           </li>
         </ul>
@@ -36,8 +36,8 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag"></span>
-          Alexandra McKing
+          <span className="logo"></span>
+          Alexandra McKING
         </Link>
       </h1>
 

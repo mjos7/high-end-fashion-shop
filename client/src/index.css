@@ -1,7 +1,7 @@
 :root {
-  --primary: #232f3e;
-  --secondary: #f3a847;
-  --tertiary: #b12704;
+  --primary: #2b2727;
+  --secondary: #000;
+  --tertiary: #5b1200;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -21,8 +21,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', 'Helvetica', 'Neue', 'Arial', sans-serif;
+  font-weight: 300;
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Bentham', serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -76,7 +76,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #000;
 }
 
 header {
@@ -86,6 +86,14 @@ header {
 
 header a {
   color: var(--light);
+  font-size: 24px;
+  font-family: 'Bentham', serif;
+  font-weight: 100;
+  line-height: 0;
+}
+
+header a:hover {
+  color: #fff;
 }
 
 button {
@@ -100,13 +108,9 @@ button {
   background-color: rgba(255, 255, 2555, 0);
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
 button[disabled] {
   cursor: default;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 img {
@@ -198,6 +202,7 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  margin: 20px 0 40px;
 }
 
 .error-text {
@@ -219,36 +224,12 @@ input:focus {
 }
 
 .headline {
-  font-size: 50px;
-  font-weight: 100;
+  font-size: 40px;
+  font-family: 'lato';
+  font-weight: 300;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 7px 15px;
-}
-
-.underline {
-  display: inline;
-  position: relative;
-  overflow: hidden;
-}
-
-.underline:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 100%;
-  bottom: -5px;
-  background: var(--secondary-color);
-  height: 4px;
-  transition-property: left right;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
-  right: 0;
 }
 
 .category {
@@ -261,8 +242,34 @@ input:focus {
   margin: 0 15px;
 }
 
+.category button:hover,
+.category button:active {
+  text-decoration: underline;
+}
+
+.add-cart {
+  margin-top: 10px;
+}
+
+.add-cart:hover {
+  margin-top: 8px;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+  .header a {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  header .logo {
+    margin-left: 30px;
+  }
+
+  header .login {
+    margin-right: 30px;
   }
 }
