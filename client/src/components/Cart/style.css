@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  width: 100%;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
@@ -50,6 +51,13 @@
 
 .cart-closed:hover {
   transform: rotate(-8deg);
+}
+
+.close-cart {
+  color: black;
+
+  font-size: 1.2rem;
+  margin: 10px 10px;
 }
 
 .cart img {
