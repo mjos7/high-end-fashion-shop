@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useMutation } from "@apollo/client";
-import Auth from "../utils/auth";
-import { ADD_USER } from "../utils/mutations";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
@@ -22,7 +22,7 @@ function Signup(props) {
     Auth.login(token);
   };
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -31,86 +31,88 @@ function Signup(props) {
   };
 
   return (
-    <div className="form-container my-2">
-      <div className="py-2">
-        <button>
-          <Link to="/login">Go to Login</Link>
-        </button>
-      </div>
-      <div className="py-1">
-        <h2>Sign Up</h2>
-      </div>
-      <div>
-        <form
-          className="grey-background form-container"
-          onSubmit={handleFormSubmit}
-        >
-          <div className="py-1">
-            <div className="flex-row py-1">
-              <label htmlFor="firstName">First name: </label>
+    <div className="form-cont-2">
+      <div className="form-container my-2">
+        <div className="py-2">
+          <button>
+            <Link to="/login">Go to Login</Link>
+          </button>
+        </div>
+        <div className="py-1">
+          <h2>Sign Up</h2>
+        </div>
+        <div>
+          <form
+            className="grey-background form-container"
+            onSubmit={handleFormSubmit}
+          >
+            <div className="py-1">
+              <div className="flex-row py-1">
+                <label htmlFor="firstName">First name: </label>
+              </div>
+              <div>
+                <input
+                  placeholder='"John"'
+                  name="firstName"
+                  type="firstName"
+                  id="firstName"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-            <div>
-              <input
-                placeholder='"John"'
-                name="firstName"
-                type="firstName"
-                id="firstName"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
-          <div className="py-1">
-            <div className="flex-row py-1">
-              <label htmlFor="lastName">Last name:</label>
+            <div className="py-1">
+              <div className="flex-row py-1">
+                <label htmlFor="lastName">Last name:</label>
+              </div>
+              <div>
+                <input
+                  placeholder='"Smith"'
+                  name="lastName"
+                  type="lastName"
+                  id="lastName"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-            <div>
-              <input
-                placeholder='"Smith"'
-                name="lastName"
-                type="lastName"
-                id="lastName"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
-          <div className="py-1">
-            <div className="flex-row py-1">
-              <label htmlFor="email">Email:</label>
+            <div className="py-1">
+              <div className="flex-row py-1">
+                <label htmlFor="email">Email:</label>
+              </div>
+              <div>
+                <input
+                  placeholder="youremail@test.com"
+                  name="email"
+                  type="email"
+                  id="email"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-            <div>
-              <input
-                placeholder="youremail@test.com"
-                name="email"
-                type="email"
-                id="email"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
-          <div className="py-1">
-            <div className="flex-row py-1">
-              <label htmlFor="pwd">Password: </label>
+            <div className="py-1">
+              <div className="flex-row py-1">
+                <label htmlFor="pwd">Password: </label>
+              </div>
+              <div>
+                <input
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-            <div>
-              <input
-                placeholder="******"
-                name="password"
-                type="password"
-                id="pwd"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
-          <div className="flex-row py-2 my-2">
-            <button className="py-1" type="submit">
-              Create Account
-            </button>
-          </div>
-        </form>
+            <div className="flex-row py-2 my-2">
+              <button className="py-1" type="submit">
+                Create Account
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

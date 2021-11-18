@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bentham", serif;
+  font-family: 'Bentham', serif;
 
   font-weight: 500;
   margin: 5px 0;
@@ -119,15 +119,14 @@ button {
 
 button[disabled] {
   cursor: default;
-
-  opacity: 1;
+  opacity: 0;
 }
 
 img {
   max-width: 100%;
 }
 
-span[role="img"] {
+span[role='img'] {
   cursor: default;
 }
 
@@ -164,8 +163,6 @@ input:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 15px;
-  padding: 15px;
 }
 
 .product-container {
@@ -182,6 +179,15 @@ input:focus {
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
+}
+
+.form-cont-2 {
+  margin-top: 70px;
+}
+
+.shadow {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 0.12);
 }
 
 .flex-row {
@@ -265,6 +271,10 @@ input:focus {
 
 /* MJ custom styling */
 
+nav a {
+  font-size: 20px;
+}
+
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +299,7 @@ input:focus {
 .category {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 30px 0;
 }
 
@@ -322,20 +333,26 @@ input:focus {
   }
 }
 
-@media screen and (min-width: 500px) {
-  header .logo {
-    margin-left: 30px;
-  }
-
-  header .login {
-    margin-right: 30px;
-  }
-}
-
 @media screen and (min-width: 1145px) {
   .hero {
     background-size: cover;
     height: 70vh;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero {
+    height: 35vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  header {
+    flex-wrap: wrap;
   }
 }
 
@@ -352,14 +369,55 @@ input:focus {
   .hero {
     background-attachment: scroll;
     background-size: cover;
+    height: 40vh;
     text-align: center;
+    margin-top: 130px;
   }
   .category button {
     margin: 0;
   }
 }
 
+@media screen and (max-width: 625px) {
+  header,
+  nav {
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    margin-top: -2px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+
+  ul.flex-row {
+    padding-left: 0;
+  }
+
+  header .logo {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header,
+  nav {
+    justify-content: center;
+  }
+  .login {
+    margin-right: 0;
+  }
+}
+
 /* About page hero text */
+
+.about-page {
+  margin-top: 100px;
+}
+
 .hero-cta {
   width: 90%;
   text-align: left;
