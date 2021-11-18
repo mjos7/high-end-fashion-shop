@@ -322,8 +322,8 @@ nav a {
     width: 100%;
   }
 
-  header a {
-    margin-left: 20px;
+  header {
+    flex-wrap: wrap;
   }
 }
 
@@ -340,20 +340,9 @@ nav a {
   }
 }
 
-@media screen and (min-width: 625px) {
-  header .logo {
-    margin-left: 30px;
-  }
-
-  header .login {
-    margin-right: 50px;
-  }
-}
-
 @media screen and (max-width: 625px) {
   header,
   nav {
-    justify-content: center;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -371,11 +360,17 @@ nav a {
   }
 
   header .logo {
-    margin-left: 0px;
+    margin-left: 20px;
   }
+}
 
-  header .login {
-    margin-right: 0px;
+@media screen and (max-width: 420px) {
+  header,
+  nav {
+    justify-content: center;
+  }
+  .login {
+    margin-right: 0;
   }
 }
 
