@@ -247,6 +247,7 @@ input:focus {
   background-color: #e0e0e0;
   border: solid 1px #c2c2c2;
   opacity: 90%;
+  padding: 15px;
 }
 
 .grey-background:hover {
@@ -321,7 +322,7 @@ nav a {
 }
 
 .prod-img {
-  padding-top: 100px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -360,8 +361,9 @@ nav a {
   .prod-two-column {
     flex-wrap: wrap;
   }
+
   .prod-img {
-    margin-top: 100px;
+    margin-top: 0px;
   }
 }
 

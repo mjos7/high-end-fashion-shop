@@ -115,7 +115,7 @@ function Detail() {
               </p>
             </div>
 
-            <div className="product-container form-container c">
+            <div className="product-container form-container prod-img">
               <img
                 style={{ width: "60%" }}
                 src={`/images/${currentProduct.image}`}
