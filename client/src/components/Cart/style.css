@@ -38,15 +38,16 @@
   font-size: 2rem;
   cursor: pointer;
   background-color: lightgray;
+  opacity: 90%;
   border: 1px solid grey;
-  border-radius: 30%;
+  border-radius: 10%;
   padding: 0.25rem;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 }
 
 .cart-closed:hover {
-  transform: scale(1.1, 1.1);
+  opacity: 100%;
 }
 
 .cart img {
