@@ -1,7 +1,9 @@
 :root {
+
   --primary: #2b2727;
   --secondary: #000;
   --tertiary: #5b1200;
+
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -21,8 +23,10 @@ body {
 body {
   margin: 0;
   padding: 0;
+
   font-family: 'Lato', 'Helvetica', 'Neue', 'Arial', sans-serif;
   font-weight: 300;
+
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
@@ -34,7 +38,9 @@ h3,
 h4,
 h5,
 h6 {
+
   font-family: 'Bentham', serif;
+
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -76,7 +82,9 @@ a {
 }
 
 a:hover {
+
   color: #000;
+
 }
 
 header {
@@ -89,6 +97,8 @@ header {
 
 header a {
   color: var(--light);
+
+
   font-size: 24px;
   font-family: 'Bentham', serif;
   font-weight: 100;
@@ -108,19 +118,26 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
+
+
   background-color: rgba(255, 255, 2555, 0);
+
 }
 
 button[disabled] {
   cursor: default;
+
   opacity: 1;
+
 }
 
 img {
   max-width: 100%;
 }
 
+
 span[role='img'] {
+
   cursor: default;
 }
 
@@ -147,6 +164,19 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+  padding: 15px
 }
 
 .flex-row {
@@ -202,15 +232,30 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
+
+.grey-background {
+  background-color: #E0E0E0;
+  border: solid 1px #C2C2C2;
+  opacity: 90%;
+}
+
+.grey-background:hover {
+  opacity: 100%;
+}
+
+
+
 .card {
   width: 25%;
   text-align: center;
   margin: 20px 0 40px;
+
 }
 
 .error-text {
   color: var(--error);
 }
+
 
 /* About page's cover image */
 .my-5 {
@@ -315,6 +360,7 @@ input:focus {
   font-size: 55px;
   color: var(--primary-color);
 }
+
 
 @media screen and (max-width: 768px) {
   .card {
