@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { idbPromise } from '../utils/helpers';
-import { useQuery } from '@apollo/client';
-import { useStoreContext } from '../utils/GlobalState';
-import { QUERY_PRODUCTS } from '../utils/queries';
-import spinner from '../assets/spinner.gif';
-import Cart from '../components/Cart';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { idbPromise } from "../utils/helpers";
+import { useQuery } from "@apollo/client";
+import { useStoreContext } from "../utils/GlobalState";
+import { QUERY_PRODUCTS } from "../utils/queries";
+import spinner from "../assets/spinner.gif";
+import Cart from "../components/Cart";
 
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
-} from '../utils/actions';
+} from "../utils/actions";
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -22,7 +22,7 @@ function Detail() {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   const addToCart = () => {
-    const itemInCart = cart.find(cartItem => cartItem._id === id);
+    const itemInCart = cart.find((cartItem) => cartItem._id === id);
 
     if (itemInCart) {
       dispatch({
@@ -31,7 +31,7 @@ function Detail() {
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
       // if we're updating quantity, use existing item data and increment purchaseQuantity value by one
-      idbPromise('cart', 'put', {
+      idbPromise("cart", "put", {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
@@ -41,7 +41,7 @@ function Detail() {
         product: { ...currentProduct, purchaseQuantity: 1 },
       });
       // if product isn't in the cart yet, add it to the current shopping cart in IndexedDB
-      idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }
   };
 
@@ -52,13 +52,13 @@ function Detail() {
     });
 
     // upon removal from cart, delete the item from IndexedDB using the `currentProduct._id` to locate what to remove
-    idbPromise('cart', 'delete', { ...currentProduct });
+    idbPromise("cart", "delete", { ...currentProduct });
   };
 
   useEffect(() => {
     // already in global store
     if (products.length) {
-      setCurrentProduct(products.find(product => product._id === id));
+      setCurrentProduct(products.find((product) => product._id === id));
     }
     // retrieved from server
     else if (data) {
@@ -67,13 +67,13 @@ function Detail() {
         products: data.products,
       });
 
-      data.products.forEach(product => {
-        idbPromise('products', 'put', product);
+      data.products.forEach((product) => {
+        idbPromise("products", "put", product);
       });
     }
     // get cache from idb
     else if (!loading) {
-      idbPromise('products', 'get').then(indexedProducts => {
+      idbPromise("products", "get").then((indexedProducts) => {
         dispatch({
           type: UPDATE_PRODUCTS,
           products: indexedProducts,
@@ -83,38 +83,51 @@ function Detail() {
   }, [products, data, loading, dispatch, id]);
 
   return (
-    <>
-      {currentProduct ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
-
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button className="add-cart" onClick={addToCart}>
-              Add to cart
+    <div className="form-cont-2">
+      <>
+        {currentProduct ? (
+          <div className="prod-two-column my-2">
+            <div className="product-container form-container">
+            <div className="container my-2">
+            <button className="my-2">
+              <Link to="/">← Back to Products</Link>
             </button>
-            <button
-              className="add-cart"
-              disabled={!cart.find(p => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
+            </div>
+            <div className="my-2">
+              <h2>{currentProduct.name}</h2>
+              </div>
+              <div className="prod-desc">
+                <p>{currentProduct.description}</p>
+              </div>
 
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
-        </div>
-      ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
-      <Cart />
-    </>
+              <p>
+                <strong>Price:</strong>${currentProduct.price}{" "}
+                <button className="add-cart" onClick={addToCart}>
+                  Add to cart
+                </button>
+                <button
+                  className="add-cart"
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                >
+                  Remove from Cart
+                </button>
+              </p>
+            </div>
+
+            <div className="product-container form-container c">
+              <img
+                style={{ width: "60%" }}
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+            </div>
+          </div>
+        ) : null}
+        {loading ? <img src={spinner} alt="loading" /> : null}
+        <Cart />
+      </>
+    </div>
   );
 }
 
