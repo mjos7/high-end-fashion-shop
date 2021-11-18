@@ -209,18 +209,24 @@ input:focus {
   color: var(--error);
 }
 
+/* About page's cover image */
+.my-5 {
+  margin-top: var(--spacing-five);
+  margin-bottom: var(--spacing-five);
+}
+
 /* MJ custom styling */
 
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
-  background-image: url('../../client/src/assets/wp5624287-women-luxury-wallpapers.png');
-  background-size: cover;
+  background-image: url('../../client/src/assets/53c07536d04cdc23ff333e3d3452c79f.jpg');
+  background-size: contain;
   background-attachment: fixed;
-  height: 40vh;
+  height: 50vh;
 }
 
 .headline {
@@ -271,5 +277,44 @@ input:focus {
 
   header .login {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1145px) {
+  .hero {
+    background-size: cover;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hero {
+    background-attachment: scroll;
+    background-size: cover;
+    text-align: center;
+  }
+  .category button {
+    margin: 0;
+  }
+}
+
+/* About page hero text */
+.hero-cta {
+  width: 90%;
+  text-align: left;
+  margin: 3.5%;
+  color: rgb(8, 8, 8);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.hero-cta h2 {
+  font-size: 55px;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
   }
 }
