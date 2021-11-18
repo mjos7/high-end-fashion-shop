@@ -38,10 +38,10 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <h1>
-        <Link to="/">
+        <a href="/">
           <span className="logo"></span>
           Alexandra McKING
-        </Link>
+        </a>
       </h1>
 
       <nav>{showNavigation()}</nav>

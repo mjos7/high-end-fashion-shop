@@ -1,5 +1,4 @@
 :root {
-
   --primary: #2b2727;
   --secondary: #000;
   --tertiary: #5b1200;
@@ -38,7 +37,6 @@ h3,
 h4,
 h5,
 h6 {
-
   font-family: 'Bentham', serif;
 
   font-weight: 500;
@@ -82,9 +80,7 @@ a {
 }
 
 a:hover {
-
   color: #000;
-
 }
 
 header {
@@ -97,7 +93,6 @@ header {
 
 header a {
   color: var(--light);
-
 
   font-size: 24px;
   font-family: 'Bentham', serif;
@@ -119,25 +114,20 @@ button {
   cursor: pointer;
   margin: 0 1px;
 
-
   background-color: rgba(255, 255, 2555, 0);
-
 }
 
 button[disabled] {
   cursor: default;
 
   opacity: 1;
-
 }
 
 img {
   max-width: 100%;
 }
 
-
 span[role='img'] {
-
   cursor: default;
 }
 
@@ -166,7 +156,6 @@ input:focus {
   margin-right: auto;
 }
 
-
 .form-container {
   width: 100%;
   display: flex;
@@ -175,8 +164,15 @@ input:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 15px;
-  padding: 15px
+  padding: 15px;
+}
+
+.form-cont-2 {
+  margin-top: 70px;
+}
+
+.shadow {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 0.12);
 }
 
 .flex-row {
@@ -232,10 +228,9 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
-
 .grey-background {
-  background-color: #E0E0E0;
-  border: solid 1px #C2C2C2;
+  background-color: #e0e0e0;
+  border: solid 1px #c2c2c2;
   opacity: 90%;
 }
 
@@ -243,19 +238,15 @@ input:focus {
   opacity: 100%;
 }
 
-
-
 .card {
   width: 25%;
   text-align: center;
   margin: 20px 0 40px;
-
 }
 
 .error-text {
   color: var(--error);
 }
-
 
 /* About page's cover image */
 .my-5 {
@@ -360,7 +351,6 @@ input:focus {
   font-size: 55px;
   color: var(--primary-color);
 }
-
 
 @media screen and (max-width: 768px) {
   .card {
