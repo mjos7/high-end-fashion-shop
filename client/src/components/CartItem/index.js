@@ -41,9 +41,8 @@ const CartItem = ({ item }) => {
         <img src={`/images/${item.image}`} alt="" />
       </div>
       <div>
-        <div>
-          {item.name}, ${item.price}
-        </div>
+        <div>{item.name}</div>
+        <div>${item.price}</div>
         <div>
           <span>Qty:</span>
           <input
