@@ -48,11 +48,11 @@ function Signup(props) {
           >
             <div className="py-1">
               <div className="flex-row py-1">
-                <label htmlFor="firstName">First name: </label>
+                <label htmlFor="firstName">First name</label>
               </div>
               <div>
                 <input
-                  placeholder='"John"'
+                  placeholder="Jane"
                   name="firstName"
                   type="firstName"
                   id="firstName"
@@ -63,11 +63,11 @@ function Signup(props) {
 
             <div className="py-1">
               <div className="flex-row py-1">
-                <label htmlFor="lastName">Last name:</label>
+                <label htmlFor="lastName">Last name</label>
               </div>
               <div>
                 <input
-                  placeholder='"Smith"'
+                  placeholder="Doe"
                   name="lastName"
                   type="lastName"
                   id="lastName"
@@ -78,11 +78,11 @@ function Signup(props) {
 
             <div className="py-1">
               <div className="flex-row py-1">
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email</label>
               </div>
               <div>
                 <input
-                  placeholder="youremail@test.com"
+                  placeholder="youremail@email.com"
                   name="email"
                   type="email"
                   id="email"
@@ -93,7 +93,7 @@ function Signup(props) {
 
             <div className="py-1">
               <div className="flex-row py-1">
-                <label htmlFor="pwd">Password: </label>
+                <label htmlFor="pwd">Password</label>
               </div>
               <div>
                 <input
