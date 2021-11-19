@@ -1,6 +1,5 @@
 # Alexandra McKing
 
-  ----
 ## Description
 ### Our shop is an online premium outlet mall that allows users to shop high end products at a discounted price.
 
@@ -8,12 +7,17 @@
 
 ## Table of Contents
 
+  *  [Deployed](#deployed)
   *  [Technologies Used](#technologies)
   *  [Credit](#credit)
   *  [License](#license)
 
 ----
+## Deployed
 
+INSERT LINK HERE
+
+----
 ## Technologies Used
 
 *  CSS
