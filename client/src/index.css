@@ -413,8 +413,18 @@ nav a {
   nav {
     justify-content: center;
   }
+
   .login {
     margin-right: 0;
+  }
+
+  .form-style {
+    min-width: 300px;
+    width: 300px;
+  }
+
+  .form-cont-2 {
+    margin-top: 120px;
   }
 }
 
