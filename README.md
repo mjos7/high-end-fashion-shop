@@ -23,7 +23,7 @@ Our shop is an high-end fashion shop that caters to the luxury consumer that is 
 ## Links
 
 - [Deployed App - Heroku](https://alexandra-mcking.herokuapp.com/)
-- [Git Page](https://github.com/mjos7/high-end-fashion-shop)
+- [Github Repo](https://github.com/mjos7/high-end-fashion-shop)
 
 ---
 
