@@ -31,11 +31,13 @@ Our shop is an high-end fashion shop that caters to the luxury consumer that is 
 
 - CSS
 - Javascript
+- GraphQL
 - MongoDB / Mongoose
 - Express
 - React
 - Node
 - Jest
+- JWT (JSON Web Token) for user authentication
 
 ---
 
