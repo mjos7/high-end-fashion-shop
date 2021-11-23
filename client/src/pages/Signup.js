@@ -43,7 +43,7 @@ function Signup(props) {
         </div>
         <div>
           <form
-            className="grey-background form-container"
+            className="form-style form-container"
             onSubmit={handleFormSubmit}
           >
             <div className="py-1">

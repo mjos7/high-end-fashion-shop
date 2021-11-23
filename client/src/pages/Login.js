@@ -42,7 +42,7 @@ function Login(props) {
         </div>
         <div>
           <form
-            className="form-container grey-background"
+            className="form-container form-style"
             onSubmit={handleFormSubmit}
           >
             <div className="py-1">
