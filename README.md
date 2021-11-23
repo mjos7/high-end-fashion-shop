@@ -1,40 +1,61 @@
-# Alexandra McKing
+# Alexandra McKING | Luxury Fashion
+
+![License](https://img.shields.io/badge/License%3A-MIT-green.svg)
+
+![Screenshot](client/src/assets/home-page-mockup.png)
 
 ## Description
-### Our shop is an online premium outlet mall that allows users to shop high end products at a discounted price.
 
-----
+Our shop is an high-end fashion shop that caters to the luxury consumer that is looking for the latest fashion trends.
+
+---
 
 ## Table of Contents
 
-  *  [Deployed](#deployed)
-  *  [Technologies Used](#technologies)
-  *  [Credit](#credit)
-  *  [License](#license)
+- [Links](#links)
+- [Tech Used](#tech-used)
+- [Credit](#credit)
+- [Questions](#questions)
+- [License](#license)
 
-----
-## Deployed
+---
 
-INSERT LINK HERE
+## Links
 
-----
-## Technologies Used
+- [Deployed App - Heroku](https://alexandra-mcking.herokuapp.com/)
+- [Git Page](https://github.com/mjos7/high-end-fashion-shop)
 
-*  CSS
-*  Javascript
-*  Mongoose / NoSQL
-*  React
+---
 
-----
+## Tech Used
+
+- CSS
+- Javascript
+- MongoDB / Mongoose
+- Express
+- React
+- Node
+- Jest
+
+---
 
 ## Credit
 
-*  [Catherine H](https://github.com/cat-bh)
-*  [Mark Joseph](https://github.com/mjos7)
-*  [MinhHa Pham](https://github.com/minhhap)
-*  [Hannah Roddy](https://github.com/hroddy)
+- [Catherine H](https://github.com/cat-bh)
+- [Mark Joseph](https://github.com/mjos7)
+- [MinhHa Pham](https://github.com/minhhap)
+- [Hannah Roddy](https://github.com/hroddy)
 
-----
+---
+
+## Questions
+
+Please don't hesitate to reach out if you have any suggestions or feedback
+
+---
 
 ## License
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+![License](https://img.shields.io/badge/License%3A-MIT-green.svg)
+
+This app is licensed under the MIT license.
